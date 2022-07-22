@@ -14,6 +14,8 @@ class MainCollectionViewController: UICollectionViewController {
     var damaImageArray: [String] = ["1-6", "2-6", "3-6"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "다마고치 선택하기"
+        self.collectionView.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
         let layout = UICollectionViewFlowLayout()
         
         let spacing: CGFloat = 8
@@ -35,6 +37,13 @@ class MainCollectionViewController: UICollectionViewController {
     // cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+        cell.damaLabel.textAlignment = .center
+        cell.damaLabel.font = .systemFont(ofSize: 13)
+        cell.damaLabel.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
+        
+        cell.damaLabel.layer.borderWidth = 1
+        cell.damaLabel.layer.cornerRadius = 4
+        cell.damaLabel.layer.borderColor = CGColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
         
         // cell 디자인
         if !(0...2).contains(indexPath.item) {

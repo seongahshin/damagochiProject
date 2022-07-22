@@ -37,22 +37,22 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNu-oR-3av">
-                                            <rect key="frame" x="16" y="77" width="69" height="21"/>
+                                            <rect key="frame" x="8" y="81" width="85" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="iNu-oR-3av" firstAttribute="width" secondItem="4g4-Oz-eml" secondAttribute="width" id="Hbn-JE-SGr"/>
-                                        <constraint firstItem="iNu-oR-3av" firstAttribute="top" secondItem="4g4-Oz-eml" secondAttribute="bottom" constant="4" id="YFx-kT-Bup"/>
+                                        <constraint firstItem="iNu-oR-3av" firstAttribute="top" secondItem="4g4-Oz-eml" secondAttribute="bottom" constant="8" id="YFx-kT-Bup"/>
+                                        <constraint firstItem="iNu-oR-3av" firstAttribute="leading" secondItem="LBF-fr-mL0" secondAttribute="leading" constant="8" id="fqx-s4-ZCz"/>
                                         <constraint firstItem="4g4-Oz-eml" firstAttribute="top" secondItem="LBF-fr-mL0" secondAttribute="top" constant="4" id="jdL-Bc-rZS"/>
                                         <constraint firstItem="iNu-oR-3av" firstAttribute="centerX" secondItem="LBF-fr-mL0" secondAttribute="centerX" id="k53-Dd-nsQ"/>
                                         <constraint firstItem="4g4-Oz-eml" firstAttribute="leading" secondItem="LBF-fr-mL0" secondAttribute="leading" constant="16" id="oiW-R5-XIE"/>
+                                        <constraint firstAttribute="trailing" secondItem="iNu-oR-3av" secondAttribute="trailing" constant="8" id="okY-Mq-3vu"/>
                                         <constraint firstItem="4g4-Oz-eml" firstAttribute="centerX" secondItem="LBF-fr-mL0" secondAttribute="centerX" id="sCN-rG-wYn"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <size key="customSize" width="101" height="117"/>
                                 <connections>
                                     <outlet property="damaImage" destination="4g4-Oz-eml" id="S6r-VW-ZNy"/>
@@ -93,9 +93,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

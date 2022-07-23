@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68CD288AD52D00713663 /* DetailViewController.swift */; };
+		8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68CF288AF5B800713663 /* damaInfo.swift */; };
+		8C8D68D2288AF62900713663 /* dama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68D1288AF62900713663 /* dama.swift */; };
 		8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB497288A79680006C1E3 /* AppDelegate.swift */; };
 		8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB499288A79680006C1E3 /* SceneDelegate.swift */; };
 		8C8DB49F288A79680006C1E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8DB49D288A79680006C1E3 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C8D68CD288AD52D00713663 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8C8D68CF288AF5B800713663 /* damaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = damaInfo.swift; sourceTree = "<group>"; };
+		8C8D68D1288AF62900713663 /* dama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dama.swift; sourceTree = "<group>"; };
 		8C8DB494288A79680006C1E3 /* damagochiProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = damagochiProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8DB497288A79680006C1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8DB499288A79680006C1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +70,10 @@
 				8C8DB497288A79680006C1E3 /* AppDelegate.swift */,
 				8C8DB499288A79680006C1E3 /* SceneDelegate.swift */,
 				8C8DB49D288A79680006C1E3 /* Main.storyboard */,
+				8C8D68CD288AD52D00713663 /* DetailViewController.swift */,
 				8C8DB4AE288A886F0006C1E3 /* MainCollectionViewController.swift */,
+				8C8D68CF288AF5B800713663 /* damaInfo.swift */,
+				8C8D68D1288AF62900713663 /* dama.swift */,
 				8C8DB4B0288A89640006C1E3 /* MainCollectionViewCell.swift */,
 				8C8DB4A0288A796C0006C1E3 /* Assets.xcassets */,
 				8C8DB4A2288A796C0006C1E3 /* LaunchScreen.storyboard */,
@@ -167,7 +176,10 @@
 			files = (
 				8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */,
 				8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */,
+				8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */,
+				8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */,
 				8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */,
+				8C8D68D2288AF62900713663 /* dama.swift in Sources */,
 				8C8DB4B1288A89640006C1E3 /* MainCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

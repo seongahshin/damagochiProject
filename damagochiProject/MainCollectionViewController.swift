@@ -12,12 +12,15 @@ import UIKit
 class MainCollectionViewController: UICollectionViewController {
     var damaNameArray: [String] = ["따끔따끔 다마고치", "방실방실 다마고치", "반짝반짝 다마고치"]
     var damaImageArray: [String] = ["1-6", "2-6", "3-6"]
+    let data = damaInfo().dama
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "다마고치 선택하기"
         self.collectionView.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
-        let layout = UICollectionViewFlowLayout()
         
+        let layout = UICollectionViewFlowLayout()
+
         let spacing: CGFloat = 8
         let width = UIScreen.main.bounds.width - (spacing * 4)
         
@@ -37,6 +40,7 @@ class MainCollectionViewController: UICollectionViewController {
     // cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+        
         cell.damaLabel.textAlignment = .center
         cell.damaLabel.font = .systemFont(ofSize: 13)
         cell.damaLabel.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
@@ -52,12 +56,25 @@ class MainCollectionViewController: UICollectionViewController {
         } else {
             cell.damaLabel.text = damaNameArray[indexPath.item]
             cell.damaImage.image = UIImage(named: damaImageArray[indexPath.item])
-            cell.damaImage.alpha = 20
         }
 
         return cell
     }
     
-   
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if (0...2).contains(indexPath.item) {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+            vc.modalPresentationStyle = .overCurrentContext
+            
+            // 값 전달
+            vc.DamaData = data[indexPath.item]
+            
+            
+            self.present(vc, animated: true)
+        }
+        
+    }
 
 }

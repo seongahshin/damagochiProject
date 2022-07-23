@@ -31,6 +31,7 @@ class GrowingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         foodTextFieldDesign()
+        
         growingDamaImage.image = UIImage(named: damaImageStar ?? "")
         if growingDamaImage.image == UIImage(named: "1-6") {
             growingDamaImage.image = UIImage(named: "1-1")
@@ -39,6 +40,7 @@ class GrowingViewController: UIViewController {
         } else if growingDamaImage.image == UIImage(named: "3-6") {
             growingDamaImage.image = UIImage(named: "3-1")
         }
+        
         damaTitleLabel.text = damaTitleStar
     }
     
@@ -85,11 +87,15 @@ class GrowingViewController: UIViewController {
             totalLevel = 8
         case 90..<100:
             totalLevel = 9
-            
         default:
             totalLevel = 10
         }
         levelText.text = "LV\(totalLevel)"
+        
+        if totalLevel == 10 {
+            totalLevel = 9
+        }
+        
         growingDamaImage.image = UIImage(named: "\(imageNumber)-\(totalLevel)")
         print("\(imageNumber)-\(totalLevel)")
         

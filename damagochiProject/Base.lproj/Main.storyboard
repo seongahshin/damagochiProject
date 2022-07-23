@@ -320,8 +320,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="drinkLabel" destination="qCX-r2-z87" id="7dc-Pf-dAa"/>
+                        <outlet property="drinkTextField" destination="lSE-Jr-poe" id="w9g-A8-Jjq"/>
                         <outlet property="foodLabel" destination="dVa-EL-6oL" id="lg8-P8-mIR"/>
                         <outlet property="foodTextField" destination="cxO-xi-aoi" id="tlz-gj-7Bm"/>
+                        <outlet property="levelText" destination="PRY-il-w8I" id="YfQ-iO-XWS"/>
                         <outlet property="talkLabel" destination="G8M-Px-HRW" id="8lM-4J-ooN"/>
                     </connections>
                 </viewController>

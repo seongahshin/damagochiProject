@@ -10,6 +10,8 @@
 		8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68CD288AD52D00713663 /* DetailViewController.swift */; };
 		8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68CF288AF5B800713663 /* damaInfo.swift */; };
 		8C8D68D2288AF62900713663 /* dama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68D1288AF62900713663 /* dama.swift */; };
+		8C8D68D4288B9E7400713663 /* GrowingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8D68D3288B9E7400713663 /* GrowingStoryboard.storyboard */; };
+		8C8D68D6288B9E8900713663 /* GrowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D68D5288B9E8900713663 /* GrowingViewController.swift */; };
 		8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB497288A79680006C1E3 /* AppDelegate.swift */; };
 		8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB499288A79680006C1E3 /* SceneDelegate.swift */; };
 		8C8DB49F288A79680006C1E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8DB49D288A79680006C1E3 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		8C8D68CD288AD52D00713663 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8C8D68CF288AF5B800713663 /* damaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = damaInfo.swift; sourceTree = "<group>"; };
 		8C8D68D1288AF62900713663 /* dama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dama.swift; sourceTree = "<group>"; };
+		8C8D68D3288B9E7400713663 /* GrowingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GrowingStoryboard.storyboard; sourceTree = "<group>"; };
+		8C8D68D5288B9E8900713663 /* GrowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingViewController.swift; sourceTree = "<group>"; };
 		8C8DB494288A79680006C1E3 /* damagochiProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = damagochiProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8DB497288A79680006C1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8DB499288A79680006C1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		8C8DB4AC288A857C0006C1E3 /* Grow */ = {
 			isa = PBXGroup;
 			children = (
+				8C8D68D3288B9E7400713663 /* GrowingStoryboard.storyboard */,
+				8C8D68D5288B9E8900713663 /* GrowingViewController.swift */,
 			);
 			path = Grow;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8DB4A4288A796C0006C1E3 /* LaunchScreen.storyboard in Resources */,
+				8C8D68D4288B9E7400713663 /* GrowingStoryboard.storyboard in Resources */,
 				8C8DB4A1288A796C0006C1E3 /* Assets.xcassets in Resources */,
 				8C8DB49F288A79680006C1E3 /* Main.storyboard in Resources */,
 			);
@@ -176,6 +183,7 @@
 			files = (
 				8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */,
 				8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */,
+				8C8D68D6288B9E8900713663 /* GrowingViewController.swift in Sources */,
 				8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */,
 				8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */,
 				8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */,

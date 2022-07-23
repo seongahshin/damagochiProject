@@ -75,4 +75,21 @@ class DetailViewController: UIViewController {
         startButton.layer.borderWidth = 1
         
     }
+    
+    
+    @IBAction func CancelButtonClicked(_ sender: UIButton) {
+        self.dismiss(animated: true)
+        
+    }
+    
+    @IBAction func StartButtonClicked(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "GrowingViewController") as! GrowingViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+//    
+    
 }
+
+}
+
+

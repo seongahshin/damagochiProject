@@ -71,8 +71,9 @@ class MainCollectionViewController: UICollectionViewController {
             // 값 전달
             vc.DamaData = data[indexPath.item]
             
-            
-            self.present(vc, animated: true)
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .overCurrentContext
+            self.present(nav, animated: true)
         }
         
     }

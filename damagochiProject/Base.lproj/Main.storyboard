@@ -90,6 +90,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="CancelButtonClicked:" destination="MOZ-sb-WcX" eventType="touchUpInside" id="XAn-R6-uyx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-ge-5c4">
                                         <rect key="frame" x="127" y="337" width="127" height="44"/>
@@ -98,6 +101,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="StartButtonClicked:" destination="MOZ-sb-WcX" eventType="touchUpInside" id="bjY-J1-Pxj"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-Hn-b9z">
                                         <rect key="frame" x="20" y="8" width="214" height="321"/>
@@ -181,6 +187,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqy-1v-ZxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1863.7681159420292" y="114.50892857142857"/>
+        </scene>
+        <!--Growing View Controller-->
+        <scene sceneID="wpj-SL-Gy3">
+            <objects>
+                <viewController storyboardIdentifier="GrowingViewController" id="ohU-aJ-Hco" customClass="GrowingViewController" customModule="damagochiProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J0e-5b-nd1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OB4-RM-dcC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0VF-v4-73E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuZ-2n-dAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zSe-aZ-OCd">

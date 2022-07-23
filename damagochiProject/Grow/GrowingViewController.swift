@@ -32,6 +32,13 @@ class GrowingViewController: UIViewController {
         super.viewDidLoad()
         foodTextFieldDesign()
         growingDamaImage.image = UIImage(named: damaImageStar ?? "")
+        if growingDamaImage.image == UIImage(named: "1-6") {
+            growingDamaImage.image = UIImage(named: "1-1")
+        } else if growingDamaImage.image == UIImage(named: "2-6") {
+            growingDamaImage.image = UIImage(named: "2-1")
+        } else if growingDamaImage.image == UIImage(named: "3-6") {
+            growingDamaImage.image = UIImage(named: "3-1")
+        }
         damaTitleLabel.text = damaTitleStar
     }
     
@@ -39,9 +46,23 @@ class GrowingViewController: UIViewController {
         foodTextField.keyboardType = .numberPad
     }
     
+    
     func totalLevelCount() {
         let totalCount = (foodCount/5) + (driknCount/2)
         var totalLevel = 0
+        
+        let numberArray: [Int] = [1,2,3,4,5,6,7,8,9]
+        var imageNumber = ""
+        
+        for k in numberArray {
+            if growingDamaImage.image == UIImage(named: "1-\(k)") {
+                imageNumber = "1"
+            } else if growingDamaImage.image == UIImage(named: "2-\(k)") {
+                imageNumber = "2"
+            } else if growingDamaImage.image == UIImage(named: "3-\(k)") {
+                imageNumber = "3"
+            }
+        }
         
         switch totalCount {
         case 0..<10:
@@ -69,6 +90,9 @@ class GrowingViewController: UIViewController {
             totalLevel = 10
         }
         levelText.text = "LV\(totalLevel)"
+        growingDamaImage.image = UIImage(named: "\(imageNumber)-\(totalLevel)")
+        print("\(imageNumber)-\(totalLevel)")
+        
     }
     
     @IBAction func eatButtonClicked(_ sender: UIButton) {

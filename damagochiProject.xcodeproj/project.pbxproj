@@ -19,6 +19,7 @@
 		8C8DB4A4288A796C0006C1E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8DB4A2288A796C0006C1E3 /* LaunchScreen.storyboard */; };
 		8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB4AE288A886F0006C1E3 /* MainCollectionViewController.swift */; };
 		8C8DB4B1288A89640006C1E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB4B0288A89640006C1E3 /* MainCollectionViewCell.swift */; };
+		8C900A6F288C4B2A00CDD094 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8C8DB4A5288A796C0006C1E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8DB4AE288A886F0006C1E3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		8C8DB4B0288A89640006C1E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		8C8DB4AD288A85980006C1E3 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */,
 				8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */,
 				8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */,
+				8C900A6F288C4B2A00CDD094 /* SettingTableViewController.swift in Sources */,
 				8C8D68D2288AF62900713663 /* dama.swift in Sources */,
 				8C8DB4B1288A89640006C1E3 /* MainCollectionViewCell.swift in Sources */,
 			);

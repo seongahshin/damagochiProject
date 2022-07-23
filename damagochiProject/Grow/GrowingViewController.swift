@@ -58,7 +58,9 @@ class GrowingViewController: UIViewController {
     
     @objc
     func personButtonClicked() {
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SettingTableViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func textFieldDesign() {

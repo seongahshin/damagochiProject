@@ -85,6 +85,8 @@ class DetailViewController: UIViewController {
     @IBAction func StartButtonClicked(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "GrowingViewController") as! GrowingViewController
+        vc.damaImageStar = DamaData!.imageName
+        vc.damaTitleStar = DamaData!.damaDescribe
         self.navigationController?.pushViewController(vc, animated: true)
 //    
     

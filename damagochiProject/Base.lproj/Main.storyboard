@@ -319,10 +319,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="fgm-6C-19u"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="damaTitleLabel" destination="c6f-cH-Sem" id="uqn-e9-X0u"/>
                         <outlet property="drinkLabel" destination="qCX-r2-z87" id="7dc-Pf-dAa"/>
                         <outlet property="drinkTextField" destination="lSE-Jr-poe" id="w9g-A8-Jjq"/>
                         <outlet property="foodLabel" destination="dVa-EL-6oL" id="lg8-P8-mIR"/>
                         <outlet property="foodTextField" destination="cxO-xi-aoi" id="tlz-gj-7Bm"/>
+                        <outlet property="growingDamaImage" destination="JNb-fO-o46" id="KcB-Yz-eF8"/>
                         <outlet property="levelText" destination="PRY-il-w8I" id="YfQ-iO-XWS"/>
                         <outlet property="talkLabel" destination="G8M-Px-HRW" id="8lM-4J-ooN"/>
                     </connections>

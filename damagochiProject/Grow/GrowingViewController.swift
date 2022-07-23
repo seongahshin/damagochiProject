@@ -14,20 +14,25 @@ class GrowingViewController: UIViewController {
     
     @IBOutlet weak var drinkLabel: UILabel!
     
+    @IBOutlet weak var growingDamaImage: UIImageView!
     
     @IBOutlet weak var levelText: UILabel!
     @IBOutlet weak var foodTextField: UITextField!
     
     @IBOutlet weak var drinkTextField: UITextField!
     
+    @IBOutlet weak var damaTitleLabel: UILabel!
     
     var foodCount = 0
     var driknCount = 0
+    var damaImageStar: String?
+    var damaTitleStar: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         foodTextFieldDesign()
-        
+        growingDamaImage.image = UIImage(named: damaImageStar ?? "")
+        damaTitleLabel.text = damaTitleStar
     }
     
     func foodTextFieldDesign() {

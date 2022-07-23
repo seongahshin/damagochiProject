@@ -11,4 +11,5 @@ struct Dama {
     var imageName: String
     var damaDescribe: String
     var damaDetailDescribe: String
+    var damaNumber: Int
 }

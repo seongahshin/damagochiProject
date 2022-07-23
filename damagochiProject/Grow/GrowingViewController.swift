@@ -69,7 +69,9 @@ class GrowingViewController: UIViewController {
     @IBAction func eatButtonClicked(_ sender: UIButton) {
         if foodTextField.text != "" {
             let foodNumber: Int? = Int(foodTextField.text ?? "")
-            foodCount += foodNumber ?? 0
+            if (1...99).contains(foodNumber ?? 0) {
+                foodCount += foodNumber ?? 0
+            }
         } else {
             foodCount += 1
         }
@@ -81,13 +83,14 @@ class GrowingViewController: UIViewController {
     
     @IBAction func drinkButtonClicked(_ sender: UIButton) {
         if drinkTextField.text != "" {
-            let foodNumber: Int? = Int(drinkTextField.text ?? "")
-            driknCount += foodNumber ?? 0
+            let drinkNumber: Int? = Int(drinkTextField.text ?? "")
+            if (1...49).contains(drinkNumber ?? 0) {
+                driknCount += drinkNumber ?? 0
+            }
         } else {
             driknCount += 1
-            drinkLabel.text = "물방울 \(driknCount)개"
         }
-        foodLabel.text = "밥알 \(foodCount)개"
+        drinkLabel.text = "물방울 \(driknCount)개"
         totalLevelCount()
     }
     

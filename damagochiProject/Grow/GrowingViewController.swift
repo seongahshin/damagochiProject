@@ -37,20 +37,12 @@ class GrowingViewController: UIViewController {
         self.navigationItem.title = "\(nickName)님의 다마고치"
         self.navigationItem.hidesBackButton = true
         growingDamaImage.image = UIImage(named: damaImageStar ?? "")
-        
-        if growingDamaImage.image == UIImage(named: "1-6") {
-            growingDamaImage.image = UIImage(named: "1-1")
-        } else if growingDamaImage.image == UIImage(named: "2-6") {
-            growingDamaImage.image = UIImage(named: "2-1")
-        } else if growingDamaImage.image == UIImage(named: "3-6") {
-            growingDamaImage.image = UIImage(named: "3-1")
-        }
-        
         damaTitleLabel.text = damaTitleStar
         damaTitleLabelDesign()
         labelSetDesign()
         ButtonDesign()
         textFieldDesign()
+        totalLevelCount()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(personButtonClicked))
         self.navigationController?.navigationBar.tintColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
         
@@ -131,6 +123,9 @@ class GrowingViewController: UIViewController {
                 imageNumber = "3"
             }
         }
+        let imageValue = imageNumber
+        UserDefaults.standard.set(imageValue, forKey: "image")
+        
         
         func talkLabelDesign() {
             talkLabel.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
@@ -190,7 +185,7 @@ class GrowingViewController: UIViewController {
         }
         levelText.text = "LV\(UserDefaults.standard.integer(forKey: "level"))"
         
-        growingDamaImage.image = UIImage(named:"\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level")-1)")
+        growingDamaImage.image = UIImage(named:"\(UserDefaults.standard.integer(forKey: "image"))-\(UserDefaults.standard.integer(forKey: "level")-1)")
         talkLabelDesign()
     }
     

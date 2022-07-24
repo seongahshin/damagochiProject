@@ -12,7 +12,6 @@ class SettingTableViewController:
     let Infom = SettingInfo().setting
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,6 +32,14 @@ class SettingTableViewController:
         cell.layoutMargins = UIEdgeInsets.zero
         return cell
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "NameChangeViewController") as! NameChangeViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

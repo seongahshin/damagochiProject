@@ -10,5 +10,4 @@ import Foundation
 struct Setting {
     var cellImage: String
     var cellTitle: String
-    var cellDetailTitle: String
 }

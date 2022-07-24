@@ -8,9 +8,10 @@
 import Foundation
 
 struct SettingInfo {
+    
     let setting: [Setting] = [
-    Setting(cellImage: "pencil", cellTitle: "내 이름 설정하기", cellDetailTitle: "대장"),
-    Setting(cellImage: "moon.fill", cellTitle: "다마고치 변경하기", cellDetailTitle: ""),
-    Setting(cellImage: "arrow.clockwise", cellTitle: "데이터 초기화", cellDetailTitle: "")
+    Setting(cellImage: "pencil", cellTitle: "내 이름 설정하기"),
+    Setting(cellImage: "moon.fill", cellTitle: "다마고치 변경하기"),
+    Setting(cellImage: "arrow.clockwise", cellTitle: "데이터 초기화")
     ]
 }

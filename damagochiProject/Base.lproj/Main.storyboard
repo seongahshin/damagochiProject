@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -399,9 +398,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="settingDetail" destination="SqV-v0-5Ah" id="4ly-Rg-w6l"/>
                                     <outlet property="settingImage" destination="8ey-yR-Clo" id="l0t-e1-c8o"/>
-                                    <outlet property="settingTitle" destination="ebB-xT-zYd" id="kaX-En-8TD"/>
+                                    <outlet property="settingName" destination="SqV-v0-5Ah" id="OkO-T5-eFo"/>
+                                    <outlet property="settingTitle" destination="ebB-xT-zYd" id="BDU-8E-ZYh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -415,7 +414,7 @@
             </objects>
             <point key="canvasLocation" x="4716" y="115"/>
         </scene>
-        <!--Name Change View Controller-->
+        <!--Title-->
         <scene sceneID="YjF-D2-GJg">
             <objects>
                 <viewController storyboardIdentifier="NameChangeViewController" id="10R-LK-1O3" customClass="NameChangeViewController" customModule="damagochiProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -423,21 +422,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDy-Ar-05H">
-                                <rect key="frame" x="53" y="98" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDy-Ar-05H">
+                                <rect key="frame" x="20" y="98" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1NA-dJ-Aof"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kDy-Ar-05H" firstAttribute="top" secondItem="1NA-dJ-Aof" secondAttribute="top" constant="10" id="01N-kP-icu"/>
+                            <constraint firstItem="kDy-Ar-05H" firstAttribute="leading" secondItem="1NA-dJ-Aof" secondAttribute="leading" constant="20" id="GpS-Pq-14n"/>
+                            <constraint firstItem="kDy-Ar-05H" firstAttribute="centerX" secondItem="FUg-wm-IqT" secondAttribute="centerX" id="IeP-BZ-ze0"/>
+                            <constraint firstItem="1NA-dJ-Aof" firstAttribute="trailing" secondItem="kDy-Ar-05H" secondAttribute="trailing" constant="20" id="WLP-Zn-Kzh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="5fd-xD-qq7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="eAE-Su-XhN"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameChangeTextField" destination="kDy-Ar-05H" id="Hcd-Fx-NIk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNZ-ek-MTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5562.3188405797109" y="122.54464285714285"/>
+            <point key="canvasLocation" x="6472.4637681159429" y="122.54464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zSe-aZ-OCd">
@@ -475,13 +484,28 @@
             </objects>
             <point key="canvasLocation" x="2772" y="115"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3tG-hZ-zLd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hFv-q5-18X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K1y-yR-C1t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="10R-LK-1O3" kind="relationship" relationship="rootViewController" id="33I-vL-T6H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8p3-H9-aI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5562.3188405797109" y="122.54464285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bubble" width="222" height="142"/>
         <image name="moon." width="128" height="128"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

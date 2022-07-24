@@ -30,6 +30,7 @@ class GrowingViewController: UIViewController {
     var damaImageStar: String?
     var damaTitleStar: String?
     var nickName = "대장"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)

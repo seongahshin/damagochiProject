@@ -9,11 +9,13 @@ import UIKit
 
 class SettingTableViewController:
     UITableViewController {
-    let Infom = SettingInfo().setting
+    
+    var Infom = SettingInfo().setting
+  
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+   
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -22,12 +24,13 @@ class SettingTableViewController:
         return 3
     }
     
+    var changedName: String?
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as! SettingTableViewCell
         
         cell.settingImage.image = UIImage(systemName: Infom[indexPath.row].cellImage)
         cell.settingTitle.text = Infom[indexPath.row].cellTitle
-        cell.settingDetail.text = Infom[indexPath.row].cellDetailTitle
+        cell.settingName.text = changedName
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         return cell

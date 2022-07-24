@@ -42,6 +42,11 @@ class SettingTableViewController:
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "NameChangeViewController") as! NameChangeViewController
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 1 {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "MainCollectionViewController") as! MainCollectionViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     

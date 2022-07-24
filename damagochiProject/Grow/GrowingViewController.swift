@@ -86,9 +86,9 @@ class GrowingViewController: UIViewController {
             item.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
             item.textAlignment = .center
         }
-        levelText.text = "LV0"
-        foodLabel.text = "밥알 0개"
-        drinkLabel.text = "물방울 0개"
+        levelText.text = "LV\(UserDefaults.standard.integer(forKey: "level"))"
+        foodLabel.text = "밥알 \(UserDefaults.standard.integer(forKey: "food"))개"
+        drinkLabel.text = "물방울 \(UserDefaults.standard.integer(forKey: "drink"))개"
     }
     func damaTitleLabelDesign() {
         damaTitleLabel.textAlignment = .center
@@ -115,8 +115,9 @@ class GrowingViewController: UIViewController {
     }
     
     func totalLevelCount() {
-        let totalCount = (foodCount/5) + (driknCount/2)
-        var totalLevel = 0
+        let totalCount = (UserDefaults.standard.integer(forKey: "food")/5) + (UserDefaults.standard.integer(forKey: "drink")/2)
+        var firstLevel = 0
+        UserDefaults.standard.set(firstLevel,forKey: "level")
         
         let numberArray: [Int] = [1,2,3,4,5,6,7,8,9]
         var imageNumber = ""
@@ -140,59 +141,73 @@ class GrowingViewController: UIViewController {
         
         switch totalCount {
         case 0..<10:
-            totalLevel = 1
+            let totalLevel = 1
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저를 키우기로 결정하셨군요. \(nickName)님 저를 무럭무럭 자라게 해주세요!"
         case 10..<20:
-            totalLevel = 1
+            let totalLevel = 1
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저를 키우기로 결정하셨군요. \(nickName)님 저를 무럭무럭 자라게 해주세요!"
         case 20..<30:
-            totalLevel = 2
+            let totalLevel = 2
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
         case 30..<40:
-            totalLevel = 3
+            let totalLevel = 3
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
         case 40..<50:
-            totalLevel = 4
+            let totalLevel = 4
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
         case 50..<60:
-            totalLevel = 5
+            let totalLevel = 5
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
         case 60..<70:
-            totalLevel = 6
+            let totalLevel = 6
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
         case 70..<80:
-            totalLevel = 7
+            let totalLevel = 7
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
         case 80..<90:
-            totalLevel = 8
+            let totalLevel = 8
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
         case 90..<100:
-            totalLevel = 9
+            let totalLevel = 9
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
         default:
-            totalLevel = 10
+            var totalLevel = 10
+            UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "와! 드디어 10단계가 되었어요! 저를 키워주셔서 감사합니다 \(nickName)님! 항상 행복이 가득하시길 바랄게요!"
+            if totalLevel == 10 {
+                totalLevel = 9
+            }
         }
-        levelText.text = "LV\(totalLevel)"
+        levelText.text = "LV\(UserDefaults.standard.integer(forKey: "level"))"
         
-        if totalLevel == 10 {
-            totalLevel = 9
-        }
-        
-        growingDamaImage.image = UIImage(named: "\(imageNumber)-\(totalLevel)")
+        growingDamaImage.image = UIImage(named:"\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level")-1)")
         talkLabelDesign()
     }
     
     @IBAction func eatButtonClicked(_ sender: UIButton) {
+        let foodNumber: Int? = Int(foodTextField.text ?? "")
+        let foodCount = UserDefaults.standard.integer(forKey: "food")
+        
         if foodTextField.text != "" {
-            let foodNumber: Int? = Int(foodTextField.text ?? "")
             if (1...99).contains(foodNumber ?? 0) {
-                foodCount += foodNumber ?? 0
+                let foodUpdateCount = foodCount + (foodNumber ?? 0)
+                UserDefaults.standard.set(foodUpdateCount, forKey: "food")
             }
         } else {
-            foodCount += 1
+            let foodUpdateCount = foodCount + 1
+            UserDefaults.standard.set(foodUpdateCount, forKey: "food")
         }
-        foodLabel.text = "밥알 \(foodCount)개"
+        foodLabel.text = "밥알 \(UserDefaults.standard.integer(forKey: "food"))개"
         totalLevelCount()
         foodTextField.text = ""
         
@@ -200,15 +215,19 @@ class GrowingViewController: UIViewController {
     
     
     @IBAction func drinkButtonClicked(_ sender: UIButton) {
+        let drinkNumber: Int? = Int(drinkTextField.text ?? "")
+        let drinkCount = UserDefaults.standard.integer(forKey: "drink")
+        
         if drinkTextField.text != "" {
-            let drinkNumber: Int? = Int(drinkTextField.text ?? "")
             if (1...49).contains(drinkNumber ?? 0) {
-                driknCount += drinkNumber ?? 0
+                let drinkUpdateCount = drinkCount + (drinkNumber ?? 0)
+                UserDefaults.standard.set(drinkUpdateCount, forKey: "drink")
             }
         } else {
-            driknCount += 1
+            let drinkUpdateCount = drinkCount + 1
+            UserDefaults.standard.set(drinkUpdateCount, forKey: "drink")
         }
-        drinkLabel.text = "물방울 \(driknCount)개"
+        drinkLabel.text = "물방울 \(UserDefaults.standard.integer(forKey: "drink"))개"
         totalLevelCount()
         drinkTextField.text = ""
     }

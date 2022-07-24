@@ -24,6 +24,7 @@ class GrowingViewController: UIViewController {
     @IBOutlet weak var eatButton: UIButton!
     @IBOutlet var labelSet: [UILabel]!
     @IBOutlet var textFieldSet: [UITextField]!
+    
     var foodCount = 0
     var driknCount = 0
     var damaImageStar: String?

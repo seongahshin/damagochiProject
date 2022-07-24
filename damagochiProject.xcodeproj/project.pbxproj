@@ -20,6 +20,9 @@
 		8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB4AE288A886F0006C1E3 /* MainCollectionViewController.swift */; };
 		8C8DB4B1288A89640006C1E3 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DB4B0288A89640006C1E3 /* MainCollectionViewCell.swift */; };
 		8C900A6F288C4B2A00CDD094 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */; };
+		8C9E03D3288D219500508C03 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E03D2288D219500508C03 /* SettingTableViewCell.swift */; };
+		8C9E03D5288D23F700508C03 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E03D4288D23F700508C03 /* Setting.swift */; };
+		8C9E03D7288D244E00508C03 /* SettingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E03D6288D244E00508C03 /* SettingInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		8C8DB4AE288A886F0006C1E3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		8C8DB4B0288A89640006C1E3 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		8C9E03D2288D219500508C03 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		8C9E03D4288D23F700508C03 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		8C9E03D6288D244E00508C03 /* SettingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,10 @@
 		8C8DB4AD288A85980006C1E3 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				8C9E03D2288D219500508C03 /* SettingTableViewCell.swift */,
 				8C900A6E288C4B2A00CDD094 /* SettingTableViewController.swift */,
+				8C9E03D4288D23F700508C03 /* Setting.swift */,
+				8C9E03D6288D244E00508C03 /* SettingInfo.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -186,10 +195,13 @@
 			files = (
 				8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */,
 				8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */,
+				8C9E03D7288D244E00508C03 /* SettingInfo.swift in Sources */,
+				8C9E03D5288D23F700508C03 /* Setting.swift in Sources */,
 				8C8D68D6288B9E8900713663 /* GrowingViewController.swift in Sources */,
 				8C8D68D0288AF5B800713663 /* damaInfo.swift in Sources */,
 				8C8D68CE288AD52D00713663 /* DetailViewController.swift in Sources */,
 				8C8DB49A288A79680006C1E3 /* SceneDelegate.swift in Sources */,
+				8C9E03D3288D219500508C03 /* SettingTableViewCell.swift in Sources */,
 				8C900A6F288C4B2A00CDD094 /* SettingTableViewController.swift in Sources */,
 				8C8D68D2288AF62900713663 /* dama.swift in Sources */,
 				8C8DB4B1288A89640006C1E3 /* MainCollectionViewCell.swift in Sources */,

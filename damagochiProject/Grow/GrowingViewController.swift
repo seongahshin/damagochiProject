@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast
 
 class GrowingViewController: UIViewController {
     
@@ -238,6 +239,10 @@ class GrowingViewController: UIViewController {
             if (1...99).contains(foodNumber ?? 0) {
                 let foodUpdateCount = foodCount + (foodNumber ?? 0)
                 UserDefaults.standard.set(foodUpdateCount, forKey: "food")
+            } else {
+                var style = ToastStyle()
+                style.messageColor = .white
+                self.view.makeToast("99개 이상은 먹을 수 없어요!", duration: 3.0, position: .center, style: style)
             }
         } else {
             let foodUpdateCount = foodCount + 1
@@ -259,6 +264,10 @@ class GrowingViewController: UIViewController {
             if (1...49).contains(drinkNumber ?? 0) {
                 let drinkUpdateCount = drinkCount + (drinkNumber ?? 0)
                 UserDefaults.standard.set(drinkUpdateCount, forKey: "drink")
+            } else {
+                var style = ToastStyle()
+                style.messageColor = .white
+                self.view.makeToast("50개 이상은 먹을 수 없어요!", duration: 3.0, position: .center, style: style)
             }
         } else {
             let drinkUpdateCount = drinkCount + 1

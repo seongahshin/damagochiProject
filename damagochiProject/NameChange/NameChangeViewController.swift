@@ -21,12 +21,14 @@ class NameChangeViewController: UIViewController {
     
     @objc
     func savebarButtonClicked() {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SettingTableViewController") as! SettingTableViewController
         
-        vc.changedName = nameChangeTextField.text ?? ""
-        self.present(vc, animated: true)
-//        navigationController?.popViewController(animated: true)
+        if nameChangeTextField.text == "" {
+            UserDefaults.standard.set("대장",forKey: "change")
+        } else {
+            UserDefaults.standard.set(nameChangeTextField.text, forKey: "change")
+        }
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     func textFieldDesign() {

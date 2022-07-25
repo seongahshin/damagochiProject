@@ -11,10 +11,12 @@ class SettingTableViewController:
     UITableViewController {
     
     var Infom = SettingInfo().setting
-  
+    var nameChanged: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -30,7 +32,18 @@ class SettingTableViewController:
         
         cell.settingImage.image = UIImage(systemName: Infom[indexPath.row].cellImage)
         cell.settingTitle.text = Infom[indexPath.row].cellTitle
-        cell.settingName.text = changedName
+       
+        /// MARK : 텍스트 네임 넣기
+        if indexPath.row == 0 {
+            if let NameText = UserDefaults.standard.string(forKey: "change") {
+                cell.settingName.text = NameText
+            } else {
+                cell.settingName.text = "대장"
+            }
+        }
+        
+        
+        
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         return cell
@@ -63,7 +76,7 @@ class SettingTableViewController:
     }
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MainCollectionViewController")as! MainCollectionViewController
-        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     
     
     

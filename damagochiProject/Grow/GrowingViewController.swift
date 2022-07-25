@@ -29,11 +29,18 @@ class GrowingViewController: UIViewController {
     var driknCount = 0
     var damaImageStar: String?
     var damaTitleStar: String?
-    var nickName = "대장"
+    var nickName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
+        
+        if let Name = UserDefaults.standard.string(forKey: "change") {
+            nickName = Name
+        } else {
+            nickName = "대장"
+        }
+        
         self.navigationItem.title = "\(nickName)님의 다마고치"
         self.navigationItem.hidesBackButton = true
         growingDamaImage.image = UIImage(named: damaImageStar ?? "")

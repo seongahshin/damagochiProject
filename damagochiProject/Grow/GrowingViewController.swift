@@ -246,6 +246,7 @@ class GrowingViewController: UIViewController {
         foodLabel.text = "밥알 \(UserDefaults.standard.integer(forKey: "food"))개"
         totalLevelCount()
         foodTextField.text = ""
+        view.endEditing(true)
         
     }
     
@@ -266,6 +267,7 @@ class GrowingViewController: UIViewController {
         drinkLabel.text = "물방울 \(UserDefaults.standard.integer(forKey: "drink"))개"
         totalLevelCount()
         drinkTextField.text = ""
+        view.endEditing(true)
     }
     
 

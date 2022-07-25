@@ -38,7 +38,7 @@ class NameChangeViewController: UIViewController {
             }
             
         }
-        
+        view.endEditing(true)
     }
     
     func textFieldDesign() {

@@ -36,7 +36,7 @@ class SettingTableViewController:
         return cell
         
     }
-    
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -46,8 +46,29 @@ class SettingTableViewController:
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "MainCollectionViewController") as! MainCollectionViewController
             self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 2 {
+            let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실건가용?", preferredStyle: .alert)
+            let no = UIAlertAction(title: "아냐!", style: .cancel)
+            let ok = UIAlertAction(title: "웅!", style: .default, handler: someHandler(alert:))
             
+            alert.addAction(no)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
         }
     }
     
+    func someHandler(alert: UIAlertAction!) {
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    UserDefaults.standard.removeObject(forKey: key.description)
+    }
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MainCollectionViewController")as! MainCollectionViewController
+        self.present(vc, animated: true)
+    
+    
+    
+    
+
+}
+
 }

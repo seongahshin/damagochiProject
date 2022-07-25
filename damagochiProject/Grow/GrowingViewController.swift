@@ -82,6 +82,7 @@ class GrowingViewController: UIViewController {
         foodLabel.text = "밥알 \(UserDefaults.standard.integer(forKey: "food"))개"
         drinkLabel.text = "물방울 \(UserDefaults.standard.integer(forKey: "drink"))개"
     }
+    
     func damaTitleLabelDesign() {
         damaTitleLabel.textAlignment = .center
         damaTitleLabel.font = .systemFont(ofSize: 13)
@@ -106,13 +107,20 @@ class GrowingViewController: UIViewController {
         }
     }
     
+    func talkLabelDesign() {
+        talkLabel.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
+        talkLabel.font = .boldSystemFont(ofSize: 13)
+        talkLabel.numberOfLines = 6
+        talkLabel.textAlignment = .center
+    }
+    
     func totalLevelCount() {
         let totalCount = (UserDefaults.standard.integer(forKey: "food")/5) + (UserDefaults.standard.integer(forKey: "drink")/2)
         var firstLevel = 0
         UserDefaults.standard.set(firstLevel,forKey: "level")
         
         let numberArray: [Int] = [1,2,3,4,5,6,7,8,9]
-        var imageNumber = ""
+        var imageNumber = "1"
         
         for k in numberArray {
             if growingDamaImage.image == UIImage(named: "1-\(k)") {
@@ -123,69 +131,85 @@ class GrowingViewController: UIViewController {
                 imageNumber = "3"
             }
         }
-        let imageValue = imageNumber
-        UserDefaults.standard.set(imageValue, forKey: "image")
         
-        
-        func talkLabelDesign() {
-            talkLabel.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
-            talkLabel.font = .boldSystemFont(ofSize: 13)
-            talkLabel.numberOfLines = 6
-            talkLabel.textAlignment = .center
-        }
         
         switch totalCount {
         case 0..<10:
             let totalLevel = 1
             UserDefaults.standard.set(totalLevel, forKey: "level")
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             talkLabel.text = "저를 키우기로 결정하셨군요. \(nickName)님 저를 무럭무럭 자라게 해주세요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
+            
         case 10..<20:
             let totalLevel = 1
             UserDefaults.standard.set(totalLevel, forKey: "level")
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             talkLabel.text = "저를 키우기로 결정하셨군요. \(nickName)님 저를 무럭무럭 자라게 해주세요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 20..<30:
             let totalLevel = 2
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 30..<40:
             let totalLevel = 3
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 40..<50:
             let totalLevel = 4
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 50..<60:
             let totalLevel = 5
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "저는요 \(nickName)님의 사랑을 듬뿍 받고 자라요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 60..<70:
             let totalLevel = 6
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 70..<80:
             let totalLevel = 7
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 80..<90:
             let totalLevel = 8
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         case 90..<100:
             let totalLevel = 9
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "룰루랄라 세상에서 저는 밥 먹는게 제일 즐겁답니다! 나는야 세상에서 제일가는 멋쟁이^^"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
         default:
             var totalLevel = 10
+            UserDefaults.standard.set(imageNumber, forKey: "image")
             UserDefaults.standard.set(totalLevel, forKey: "level")
             talkLabel.text = "와! 드디어 10단계가 되었어요! 저를 키워주셔서 감사합니다 \(nickName)님! 항상 행복이 가득하시길 바랄게요!"
+            growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level"))")
             if totalLevel == 10 {
                 totalLevel = 9
+                growingDamaImage.image = UIImage(named: "\(imageNumber)-\(UserDefaults.standard.integer(forKey: "level")-1)")
             }
         }
+
+        
         levelText.text = "LV\(UserDefaults.standard.integer(forKey: "level"))"
         
-        growingDamaImage.image = UIImage(named:"\(UserDefaults.standard.integer(forKey: "image"))-\(UserDefaults.standard.integer(forKey: "level")-1)")
         talkLabelDesign()
     }
     

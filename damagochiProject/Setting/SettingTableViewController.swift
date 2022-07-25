@@ -15,8 +15,16 @@ class SettingTableViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "설정"
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let indexPath = IndexPath.init(row: 0, section: 0)
+        tableView.reloadRows(at: [indexPath], with: .none)
+    }
    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -42,8 +50,11 @@ class SettingTableViewController:
             }
         }
         
-        
-        
+        cell.settingImage.tintColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
+        cell.settingTitle.font = .boldSystemFont(ofSize: 13)
+        cell.settingName.textColor = UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
+        cell.settingName.font = .systemFont(ofSize: 13)
+        cell.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         return cell
@@ -74,14 +85,12 @@ class SettingTableViewController:
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
                     UserDefaults.standard.removeObject(forKey: key.description)
     }
+        // 영상처럼 화면 전환하는 법을 모르겠습니다ㅜㅜ
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MainCollectionViewController")as! MainCollectionViewController
         self.navigationController?.pushViewController(vc, animated: true)
-    
-    
-    
-    
 
 }
-
+    
+    
 }

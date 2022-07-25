@@ -14,7 +14,8 @@ class NameChangeViewController: UIViewController {
     var name = SettingInfo().setting
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
+        self.navigationItem.title = "대장님 이름 정하기"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(savebarButtonClicked))
         textFieldDesign()
     }
@@ -39,6 +40,10 @@ class NameChangeViewController: UIViewController {
         nameChangeTextField.layer.addSublayer((border))
         nameChangeTextField.textAlignment = .left
         nameChangeTextField.placeholder = "대장님의 이름을 알려주세용!"
+        nameChangeTextField.text = UserDefaults.standard.string(forKey: "change")
+        if nameChangeTextField.text == "" {
+            nameChangeTextField.text = "대장"
+        }
     }
     
     

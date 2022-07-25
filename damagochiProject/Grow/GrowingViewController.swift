@@ -56,6 +56,16 @@ class GrowingViewController: UIViewController {
         
             }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let Name = UserDefaults.standard.string(forKey: "change") {
+            nickName = Name
+        } else {
+            nickName = "대장"
+        }
+        
+        self.navigationItem.title = "\(nickName)님의 다마고치"
+        totalLevelCount()
+    }
     
     @objc
     func personButtonClicked() {

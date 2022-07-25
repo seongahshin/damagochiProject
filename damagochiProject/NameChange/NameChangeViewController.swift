@@ -25,11 +25,20 @@ class NameChangeViewController: UIViewController {
         
         if nameChangeTextField.text == "" {
             UserDefaults.standard.set("대장",forKey: "change")
+            self.navigationController?.popViewController(animated: true)
         } else {
-            UserDefaults.standard.set(nameChangeTextField.text, forKey: "change")
+            if (2...6).contains(nameChangeTextField.text!.count) {
+                UserDefaults.standard.set(nameChangeTextField.text, forKey: "change")
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                let alert = UIAlertController(title: "오류", message: "글자는 2글자 이상 6글자 이하로 작성해주세요!", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "다시 작성하기", style: .default)
+                alert.addAction(ok)
+                present(alert, animated: true, completion: nil)
+            }
+            
         }
         
-        self.navigationController?.popViewController(animated: true)
     }
     
     func textFieldDesign() {

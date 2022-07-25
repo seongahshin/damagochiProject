@@ -63,16 +63,16 @@ class DetailViewController: UIViewController {
         cancelButton.setTitleColor(UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1), for: .normal)
         cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         cancelButton.titleLabel?.textAlignment = .center
-        cancelButton.layer.borderWidth = 1
+        cancelButton.layer.borderWidth = 0
         cancelButton.layer.borderColor = CGColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
-        
+        cancelButton.layer.cornerRadius = 20
         
         startButton.setTitle("시작하기", for: .normal)
         startButton.setTitleColor(UIColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1), for: .normal)
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         startButton.titleLabel?.textAlignment = .center
         startButton.layer.borderColor = CGColor(red: 77/255, green: 106/225, blue: 120/255, alpha: 1)
-        startButton.layer.borderWidth = 1
+        startButton.layer.borderWidth = 0
         
     }
     

@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
         popUpAlertDesign()
         buttonDesign()
         // 백그라운드 투명도 조절
-        self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.4)
+        backgroundColor()
         self.view.isOpaque = false
         
         // 값 전달

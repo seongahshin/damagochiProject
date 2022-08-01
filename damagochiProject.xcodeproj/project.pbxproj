@@ -26,6 +26,7 @@
 		8C9E03DA288D30D000508C03 /* NameChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E03D9288D30D000508C03 /* NameChangeViewController.swift */; };
 		8CA4B087288E9DD3006DBDED /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8CA4B086288E9DD3006DBDED /* IQKeyboardManagerSwift */; };
 		8CA4B08A288EA639006DBDED /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 8CA4B089288EA639006DBDED /* Toast */; };
+		8CABB3C228980BE000F6CB32 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABB3C128980BE000F6CB32 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		8C9E03D4288D23F700508C03 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		8C9E03D6288D244E00508C03 /* SettingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfo.swift; sourceTree = "<group>"; };
 		8C9E03D9288D30D000508C03 /* NameChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameChangeViewController.swift; sourceTree = "<group>"; };
+		8CABB3C128980BE000F6CB32 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8C9E03D9288D30D000508C03 /* NameChangeViewController.swift */,
+				8CABB3C128980BE000F6CB32 /* extension.swift */,
 			);
 			path = NameChange;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8DB498288A79680006C1E3 /* AppDelegate.swift in Sources */,
+				8CABB3C228980BE000F6CB32 /* extension.swift in Sources */,
 				8C8DB4AF288A886F0006C1E3 /* MainCollectionViewController.swift in Sources */,
 				8C9E03D7288D244E00508C03 /* SettingInfo.swift in Sources */,
 				8C9E03D5288D23F700508C03 /* Setting.swift in Sources */,

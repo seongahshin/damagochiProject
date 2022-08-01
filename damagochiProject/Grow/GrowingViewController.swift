@@ -235,7 +235,7 @@ class GrowingViewController: UIViewController {
         let foodNumber: Int? = Int(foodTextField.text ?? "")
         let foodCount = UserDefaults.standard.integer(forKey: "food")
         
-        if foodTextField.text != "" {
+        if foodTextField.text?.isEmpty == nil {
             if (1...99).contains(foodNumber ?? 0) {
                 let foodUpdateCount = foodCount + (foodNumber ?? 0)
                 UserDefaults.standard.set(foodUpdateCount, forKey: "food")
@@ -260,7 +260,7 @@ class GrowingViewController: UIViewController {
         let drinkNumber: Int? = Int(drinkTextField.text ?? "")
         let drinkCount = UserDefaults.standard.integer(forKey: "drink")
         
-        if drinkTextField.text != "" {
+        if drinkTextField.text?.isEmpty == nil {
             if (1...49).contains(drinkNumber ?? 0) {
                 let drinkUpdateCount = drinkCount + (drinkNumber ?? 0)
                 UserDefaults.standard.set(drinkUpdateCount, forKey: "drink")

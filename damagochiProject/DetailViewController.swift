@@ -37,6 +37,11 @@ class DetailViewController: UIViewController {
         popUpDamaImage.image = UIImage(named: DamaData!.imageName)
         popUpDamaLabel.text = DamaData!.damaDescribe
         popUpDamaDetailLabel.text = DamaData!.damaDetailDescribe
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        startButton.setTitle("변경하기", for: .normal)
     }
     
     func damaTitleDesign() {

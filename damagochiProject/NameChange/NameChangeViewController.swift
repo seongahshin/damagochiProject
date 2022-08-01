@@ -23,7 +23,7 @@ class NameChangeViewController: UIViewController {
     @objc
     func savebarButtonClicked() {
         
-        if nameChangeTextField.text == "" {
+        if ((nameChangeTextField.text?.isEmpty) == nil) {
             UserDefaults.standard.set("대장",forKey: "change")
             self.navigationController?.popViewController(animated: true)
         } else {

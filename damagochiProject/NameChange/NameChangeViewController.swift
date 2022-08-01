@@ -11,7 +11,7 @@ class NameChangeViewController: UIViewController {
 
     @IBOutlet weak var nameChangeTextField: UITextField!
     
-    var name = SettingInfo().setting
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 245/255, green: 252/225, blue: 252/255, alpha: 1)
